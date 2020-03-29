@@ -1,16 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      <ion-icon name="person-circle" color="medium"></ion-icon>
-      <ion-icon name="flame" color="danger"></ion-icon>
-      <ion-icon name="sunny" color="warning"></ion-icon>
-      <ion-icon name="chatbubbles" color="medium"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/perfil']">
+        <ion-icon name="person-circle" slot="icon-only" color="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: #2dd36f; text-align: center; margin-top: 8px">
+      T2
     </ion-title>
+    <ion-buttons slot="end">
+    
+      <!-- <ion-button>
+        <ion-icon name="flame" slot="icon-only" color="danger"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="sunny" slot="icon-only" color="warning"></ion-icon>
+      </ion-button> -->
+      <ion-button [routerLink]="['/mensajes']">
+        <ion-icon name="chatbubbles" slot="icon-only" color="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-grid>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
@@ -19,15 +35,34 @@
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </div> -->
+  <ion-card style="height: 95%; width: auto;" 
+      [ngStyle]="{'background-image': 'linear-gradient(gray, gray), url(' + 'https://okdiario.com/img/2018/06/08/mujer-dominante-1-655x368.jpg' + ')', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-blend-mode': 'multiply'}" [style.background-size]="'cover'">
+    <ion-img [src]="'https://okdiario.com/img/2018/06/08/mujer-dominante-1-655x368.jpg'" style="height: 100%; width: auto;">
+    </ion-img>
+  </ion-card>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-icon name="refresh" color="warning"></ion-icon>
-    <ion-icon name="close" color="danger"></ion-icon>
-    <ion-icon name="star" color="primary"></ion-icon>
-    <ion-icon name="heart" color="secondary"></ion-icon>
-    <ion-icon name="flash" color="tertiary"></ion-icon>
+    <ion-grid  style="background-color: ;">
+      <ion-row class="ion-justify-content-around">
+        <!-- <ion-col class="iconosFooter">
+          <ion-icon name="refresh" color="warning" class="iconosFooterChicos" (click)="hola()"></ion-icon>
+        </ion-col> -->
+        <ion-col class="iconosFooter">
+          <ion-icon name="close" color="danger" class="iconosFooterGrandes" (click)="hola()"></ion-icon>
+        </ion-col>
+        <!-- <ion-col class="iconosFooter">
+          <ion-icon name="star" color="primary" class="iconosFooterChicos" (click)="hola()"></ion-icon>
+        </ion-col> -->
+        <ion-col class="iconosFooter">
+          <ion-icon name="heart" color="success" class="iconosFooterGrandes" (click)="hola()"></ion-icon>
+        </ion-col>
+        <!-- <ion-col class="iconosFooter">
+          <ion-icon name="flash" color="tertiary" class="iconosFooterChicos" (click)="hola()"></ion-icon>
+        </ion-col> -->
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-footer>

@@ -29,3 +29,24 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+.iconosFooter{
+  text-align: center;
+}
+
+.iconosFooterChicos{
+  background-color: #f4f5f8;
+  padding: 7px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.iconosFooterGrandes{
+  background-color: #f4f5f8;
+  padding: 7px;
+  border-radius: 50%;
+  border-style: solid;
+  /*border-color: gray;*/
+  /*border-width: thin;*/
+  font-size: 40px;
+}
